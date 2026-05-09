@@ -1,0 +1,72 @@
+{
+  "system_id": "LUCY_SOVEREIGN_351",
+  "version": "15.0.0",
+  "architecture": "TRI_CHANNEL_RUNTIME",
+  "projects": [
+	{
+	  "name": "LucyClean_AGI_OS_v3",
+	  "role": "Main Sovereign Shell",
+	  "path": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3"
+	},
+	{
+	  "name": "alpha-matrix-engine (AME)",
+	  "role": "Modulation Engine / Lucy Echo",
+	  "path": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3\\lucys_body_parts\\alpha-matrix-engine-(ame) (2)"
+	},
+	{
+	  "name": "lucy-prime-standalone-os",
+	  "role": "Execution Engine / Lucy Prime",
+	  "path": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3\\lucys_body_parts\\lucy-prime-standalone-os (8)"
+	},
+	{
+	  "name": "lucy-code-builder",
+	  "role": "Self-Modification / Build Pipeline",
+	  "path": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3\\lucys_body_parts\\lucy-code-builder (2)"
+	},
+	{
+	  "name": "lucy-sovereign-351",
+	  "role": "Perception / Ecosystem Scanner",
+	  "path": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3\\lucys_body_parts\\lucy-sovereign-351"
+	}
+  ],
+  "capabilities": {
+	"cognitive": ["Google GenAI Integration", "Ollama Local Brain Engine", "M3 Error Pattern Memory"],
+	"visual": ["3D Hexagonal Prism Navigation", "Global Telemetry Globe", "Node Matrix Visualizer"],
+	"system": ["Full FileSystem Access (Sovereign Tier)", "Process Management", "Hardware Monitoring", "Screen Capture"],
+	"integration": ["FiveM Bridge", "UE5 Bridge", "VR Audio Bridge"]
+  },
+  "dependencies": {
+	"core": ["react", "three", "electron", "express", "better-sqlite3"],
+	"ai": ["@google/genai", "ollama"],
+	"ui": ["framer-motion", "lucide-react", "@react-three/fiber", "recharts"],
+	"audio": ["tone"]
+  },
+  "memory_assumptions": {
+	"long_term": "SQLite (SQLiteStore.ts)",
+	"short_term": "DeltaVault (PersistentDeltaVault.ts)",
+	"failure_analysis": "ErrorPatternMemory (M3)",
+	"artifact_storage": "PersistentArtifactVault.ts"
+  },
+  "tool_access": {
+	"os_tuning": "WindowsOptimizer.ts",
+	"process_control": "ProcessManager.ts",
+	"execution": ["TacticalExecutor.ts", "SovereignActionExecutor.ts"],
+	"verification": "VisualVerificationEngine.ts"
+  },
+  "runtime_authority": {
+    "model": "Dual Kernel Architecture",
+    "gatekeeper": "Emma (Overseer)",
+    "privilege_levels": ["Safe", "Partner", "Sovereign"],
+    "trust_mechanism": "TrustCalibration.ts"
+  },
+  "ui_ownership": {
+	"primary": "HexSovereignNavigator.tsx",
+	"sub_dashboards": ["NodeMatrixView.tsx", "MainDashboard.tsx"],
+	"interaction": "ManualTeamManager.ts"
+  },
+  "event_usage": {
+	"bus": "LucyEventBus.ts",
+	"persistence": "EventStore.ts",
+	"patterns": ["Perception Signals", "Execution Tool-Requests", "Modulation Weighting"]
+  }
+}

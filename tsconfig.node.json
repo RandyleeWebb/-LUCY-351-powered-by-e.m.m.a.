@@ -1,0 +1,19 @@
+# Press Ctrl+C in all terminals# In PowerShell:
+Remove-Item -Recurse -Force node_modules\.vite -ErrorAction SilentlyContinueLAUNCH_LUCY.bat# In new terminal:
+npm run start:dashboardhttp://localhost:5173{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true
+  },
+  "include": ["scripts/**/*", "src/**/*"]
+}
