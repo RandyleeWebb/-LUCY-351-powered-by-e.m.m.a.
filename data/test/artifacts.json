@@ -1,0 +1,15 @@
+{
+  "records": {
+    "artifact_1778044606046_kdwtf8ke": {
+      "projectId": "pers_test",
+      "type": "report",
+      "path": "pers.pdf",
+      "relatedArtifacts": [],
+      "checksum": "abc",
+      "summary": "Persistent artifact",
+      "id": "artifact_1778044606046_kdwtf8ke",
+      "createdAt": 1778044606046
+    }
+  },
+  "updatedAt": 1778044606047
+}

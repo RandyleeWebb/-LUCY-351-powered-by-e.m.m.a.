@@ -694,7 +694,8 @@ export class InvestigativeCuriosityEngine {
     // Check if sim is needed for blocked cases
     if (
       existing.evidenceGaps.length > 2 &&
-      this.config.simulationsEnabled
+      this.config.simulationsEnabled &&
+      (existing.status as CaseStatus) !== 'SIM_PENDING'
     ) {
       existing.status = 'SIM_PENDING';
       existing.simSessionId = `SIM_${caseId}`;
@@ -786,7 +787,7 @@ export class InvestigativeCuriosityEngine {
       causalChain: c.causalChain,
       resolutionCaseId: c.caseId,
       simSessionId: c.simSessionId,
-      lifecycle: c.status === 'RESOLVED' ? 'CLOSED' : 'MATURITY',
+      lifecycle: c.status === 'RESOLVED' ? 'CLOSED' : 'GROWTH',
       agingRate: 0.01,
       minimumTrustRequired: c.humanImpactScore > 0.7 ? 'COPILOT' : 'INITIATE',
     };
@@ -1989,9 +1990,5 @@ export class OutputFormatter {
     };
   }
 }
-
-// ─────────────────────────────────────────────────────────────
-// EXPORT REGISTRY
-// ─────────────────────────────────────────────────────────────
 
 export default CuriosityPulseRouter;

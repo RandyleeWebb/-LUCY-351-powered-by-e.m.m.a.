@@ -1,0 +1,128 @@
+{
+  "version": "v0.5-integrated-server-lucy",
+  "rule": "Bridges can inspect, request, check, and propose. ActionEngine executes gated work only.",
+  "bridges": [
+    {
+      "id": "EARTH_BRIDGE",
+      "name": "Earth Bridge",
+      "status": "installed",
+      "type": "planetary",
+      "files": [
+        "bridges/EarthBridge.ts",
+        "bridges/earth_bridge.py"
+      ]
+    },
+    {
+      "id": "FIVEM_BRIDGE",
+      "name": "FiveM Bridge",
+      "status": "installed_dreamsystem_connected",
+      "type": "gamedev",
+      "files": [
+        "fivem/lucy_dreamsystem_source/",
+        "fivem/lucy_dreamsystem_bridge/server/main.lua",
+        "fivem/lucy_dreamsystem_resources/",
+        "fivem/lucy_dreamsystem_bridge/fxmanifest.lua",
+        "fivem/lucy_dreamsystem_bridge/client/main.lua",
+        "bridges/FiveMBridge.ts",
+        "fivem/lucy_dreamsystem_bridge/shared/config.lua"
+      ],
+      "notes": "Uploaded FiveM server/resource pack preserved and connected as Lucy DreamSystem digital twin layer."
+    },
+    {
+      "id": "UE5_BRIDGE",
+      "name": "UE5 Bridge",
+      "status": "installed",
+      "type": "gamedev",
+      "files": [
+        "bridges/UE5Bridge.ts",
+        "bridges/ue5_bridge.py"
+      ]
+    },
+    {
+      "id": "HARDWARE_BRIDGE",
+      "name": "Hardware Bridge",
+      "status": "installed",
+      "type": "local_hardware",
+      "files": [
+        "bridges/HardwareBridge.ts",
+        "bridges/hardware_bridge.py"
+      ]
+    },
+    {
+      "id": "DELTAVAULT_BRIDGE",
+      "name": "DeltaVault Bridge",
+      "status": "installed",
+      "type": "audit_storage",
+      "files": [
+        "bridges/DeltaVaultBridge.ts",
+        "bridges/deltavault_bridge.py"
+      ]
+    },
+    {
+      "id": "HOME_ASSISTANT_BRIDGE",
+      "name": "Home Assistant Bridge",
+      "status": "scaffolded_read_only",
+      "type": "home",
+      "files": [
+        "bridges/home_assistant/README.md",
+        "bridges/home_assistant/haClient.ts",
+        "bridges/home_assistant/haEmmaPolicy.ts",
+        "bridges/home_assistant/haEntityRegistry.ts",
+        "bridges/home_assistant/haProposalBuilder.ts",
+        "bridges/home_assistant/haServiceRegistry.ts"
+      ]
+    },
+    {
+      "id": "LOCAL_FILE_BRIDGE",
+      "name": "Local File Bridge",
+      "status": "scaffolded_gated",
+      "type": "local_files",
+      "files": [
+        "bridges/local_files/localFileBridge.ts"
+      ]
+    },
+    {
+      "id": "FIVEM_DREAMSYSTEM_RESOURCE",
+      "name": "Lucy FiveM DreamSystem Resource",
+      "status": "installed_bridge_resource_ready",
+      "type": "gamedev_digital_twin",
+      "files": [
+        "fivem/lucy_dreamsystem_bridge/fxmanifest.lua",
+        "fivem/lucy_dreamsystem_bridge/shared/config.lua",
+        "fivem/lucy_dreamsystem_bridge/server/main.lua",
+        "fivem/lucy_dreamsystem_bridge/client/main.lua",
+        "fivem/README_LUCY_DREAMSYSTEM_INTEGRATION.md"
+      ],
+      "notes": "FXServer resource for heartbeats, safe dream commands, markers, announcements, and digital-twin simulation hooks."
+    },
+    {
+      "id": "SERVER_LUCY_BRIDGE",
+      "name": "Server Lucy Linked Bridge",
+      "status": "installed_linked_to_main_lucy",
+      "type": "fivem_server_body",
+      "files": [
+        "fivem/server_lucy_source/",
+        "fivem/server_lucy_resources/[lucy]/lucy_bridge/fxmanifest.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_bridge/server/main.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/fxmanifest.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/server/director.lua",
+        "fivem/README_SERVER_LUCY_LINKED_BRIDGE.md"
+      ],
+      "notes": "Uploaded Server Lucy is preserved as the FiveM-side body. It links to the main Lucy AI framework through /fivem heartbeat/command/result endpoints."
+    },
+    {
+      "id": "SERVER_LUCY_FRAMEWORK",
+      "name": "Lucy FiveM Standalone Framework Resource",
+      "status": "installed_resource_ready",
+      "type": "fivem_gameplay_framework",
+      "files": [
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/client/main.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/client/menu.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/client/missions.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/client/npc_spawner.lua",
+        "fivem/server_lucy_resources/[lucy]/lucy_framework/shared/config.lua"
+      ],
+      "notes": "Standalone FiveM gameplay framework for Lucy-directed missions and scenarios. No QBCore dependency in the core resource."
+    }
+  ]
+}

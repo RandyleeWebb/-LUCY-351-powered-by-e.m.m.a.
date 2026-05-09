@@ -893,7 +893,7 @@ export class HistoryReasoner {
     const headline = this.buildHeadline(risk, topNegative, topPositive, signalTitle);
 
     // Body
-    const body = this.buildBody(risk, topNegative, topPositive, relevantChain ?? null);
+    const body = this.buildBody(risk, topNegative, topPositive, relevantChain);
 
     // Safe alternative
     const safeAlternative = topNegative?.safePath
@@ -1483,5 +1483,17 @@ export type HistoryReasonerEventType =
 // ─────────────────────────────────────────────────────────────
 // EXPORTS
 // ─────────────────────────────────────────────────────────────
+
+export {
+  HistoryReasoner,
+  ECHistoryBridge,
+  ICHistoryBridge,
+  KNOWN_FAILURE_CYCLES,
+  CAUSAL_FAILURE_CHAINS,
+  ERA_DOMAIN_MAP,
+  KEYWORD_ERA_MAP,
+  ERA_RECORDS as ERA_RECORDS_WITH_REASONER,
+  LUCY_NODE_REGISTRY_HISTORY_REASONER,
+};
 
 export default HistoryReasoner;

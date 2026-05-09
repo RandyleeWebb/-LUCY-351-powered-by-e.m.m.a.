@@ -1,0 +1,33 @@
+[
+  {
+    "id": "server_lucy_cmd_1777720835036_3479bb604923e8",
+    "type": "lucy:chat:broadcast",
+    "message": "Server Lucy bridge online.",
+    "createdAt": "2026-05-02T11:20:35.036Z",
+    "status": "queued"
+  },
+  {
+    "id": "server_lucy_cmd_1777720873560_2554a16942b8e8",
+    "type": "lucy:mission:create_basic",
+    "payload": {
+      "title": "Lucy civilian Mission",
+      "role": "civilian",
+      "objective": "Server Lucy bridge online.",
+      "coords": {
+        "x": 215.76,
+        "y": -810.12,
+        "z": 30.73
+      },
+      "reward": 250
+    },
+    "createdAt": "2026-05-02T11:21:13.560Z",
+    "status": "queued"
+  },
+  {
+    "id": "server_lucy_cmd_1777856237139_1dd88a956aac48",
+    "type": "lucy:chat:broadcast",
+    "message": "Server Lucy bridge online.",
+    "createdAt": "2026-05-04T00:57:17.140Z",
+    "status": "queued"
+  }
+]

@@ -1577,4 +1577,17 @@ export type StewardshipEventType =
 // EXPORTS
 // ─────────────────────────────────────────────────────────────
 
+export {
+  StewardshipEngine,
+  MaterialityEngine,
+  LegacyEngine,
+  HistoryRAG,
+  EarthResourceLedger,
+  SovereigntyMonitor,
+  StewardshipChatFormatter,
+  HISTORY_RAG_INDEX,
+  RESOURCE_LEDGER,
+  LUCY_NODE_REGISTRY_STEWARDSHIP,
+};
+
 export default StewardshipEngine;

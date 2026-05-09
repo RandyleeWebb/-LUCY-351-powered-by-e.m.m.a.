@@ -1,0 +1,21 @@
+{
+  "records": {
+    "delta_1778044606048_yxd08yk0": {
+      "traceId": "pers_trace",
+      "source": "PersTest",
+      "decisionType": "action_approved",
+      "summary": "Persistent decision",
+      "rationale": [
+        "pers test"
+      ],
+      "outcome": "success",
+      "relatedArtifacts": [
+        "artifact_1778044606046_kdwtf8ke"
+      ],
+      "id": "delta_1778044606048_yxd08yk0",
+      "createdAt": 1778044606048,
+      "updatedAt": 1778044606048
+    }
+  },
+  "updatedAt": 1778044606049
+}
