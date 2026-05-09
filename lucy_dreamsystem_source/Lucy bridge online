@@ -1,0 +1,4 @@
+curl -X POST http://127.0.0.1:31337/api/queue-command \
+  -H "Content-Type: application/json" \
+  -H "X-Lucy-Bridge-Secret: dev-change-me" \
+  -d "{\"type\":\"lucy:chat:broadcast\",\"message\":\"Lucy bridge online. Server telemetry received.\"}"

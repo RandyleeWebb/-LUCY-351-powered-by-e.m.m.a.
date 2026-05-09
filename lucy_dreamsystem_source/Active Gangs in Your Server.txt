@@ -1,0 +1,106 @@
+Active Gangs in Your Server
+Ballas
+
+Territory: Davis area (105.8, -1940.2, 20.8)
+Radius: 150.0 units
+Color: Purple (27)
+Specialization: Drugs
+Rivals: Families, Vagos
+Allies: None
+Families
+
+Territory: Chamberlain Hills area (-173.3, -1634.5, 33.5)
+Radius: 150.0 units
+Color: Green (25)
+Specialization: Weapons
+Rivals: Ballas, Vagos
+Allies: None
+Vagos
+
+Territory: Rancho area (334.2, -2039.5, 21.1)
+Radius: 150.0 units
+Color: Yellow (46)
+Specialization: Vehicles
+Rivals: Ballas, Families
+Allies: None
+Lost MC
+
+Territory: Vinewood Hills (977.2, -95.8, 74.8)
+Radius: 150.0 units
+Color: Dark Blue (40)
+Specialization: Weapons
+Rivals: Vagos
+Allies: Riptides
+Marabunta Grande
+
+Territory: East Los Santos (1251.5, -1601.2, 53.3)
+Radius: 150.0 units
+Color: Blue (38)
+Specialization: Drugs
+Rivals: Ballas, Vagos
+Allies: None
+The Riptides
+
+Territory: Vespucci Beach (-1495.42, -1387.6, 2.13)
+Radius: 100.0 units
+Color: Light Blue (15)
+Specialization: Weed
+Rivals: Ballas
+Allies: Lost MC
+Gang Services & Interactions
+Each gang offers different services based on their specialization:
+
+Weapons Dealers (Families, Lost MC)
+Knife ($1,000)
+Baseball Bat ($1,500)
+Pistol ($5,000)
+Pistol Ammo ($500)
+Brass Knuckles ($1,200)
+Switchblade ($1,800)
+Drug Dealers (Ballas, Marabunta Grande)
+Weed Bag ($500)
+Joint ($120)
+Cocaine Bag ($1,500)
+Meth Bag ($1,200)
+Ecstasy Pill ($300)
+Vehicle Dealers (Vagos)
+Blista ($15,000)
+Asbo ($12,000)
+Faction ($25,000)
+Club ($18,000)
+Gauntlet ($35,000)
+Weed Specialists (Riptides)
+Beach-grown weed
+Surf lessons
+Beach parties
+Surfboard rentals
+Vehicle rentals
+Gang Relationships
+The gang ecosystem in your server has several established rivalries and alliances:
+
+Major Rivalries
+Ballas vs. Families (traditional South Los Santos rivalry)
+Ballas vs. Vagos
+Families vs. Vagos
+Vagos vs. Lost MC
+Ballas vs. Marabunta Grande
+Vagos vs. Marabunta Grande
+Ballas vs. Riptides
+Alliances
+Lost MC and Riptides (the only established alliance in the city)
+Gang Mission System
+Players can build reputation with gangs and receive missions including:
+
+Delivery missions
+Elimination/hit contracts
+Vehicle theft
+Protection assignments
+Business intimidation
+Implementation Notes
+Your server uses a comprehensive gang system with:
+
+Dynamic Reputation System: Players build or lose standing with each gang
+Territory Control: Each gang has defined territories with visual blips
+Safe Zones: Areas where gang activity is restricted (Police Station, Hospital, City Hall)
+Integration: The system integrates with Interior Zone Manager for zone management
+This provides a rich ecosystem for roleplay and gameplay around gang activities, with each gang having unique characteristics, territories, and services.

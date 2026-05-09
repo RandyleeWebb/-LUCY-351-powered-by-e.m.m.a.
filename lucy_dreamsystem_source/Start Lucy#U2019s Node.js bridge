@@ -1,0 +1,3 @@
+node lucy/bridges/fivem/lucy_fivem_bridge.js
+# OR run with 'demo' to enqueue a test broadcast:
+node lucy/bridges/fivem/lucy_fivem_bridge.js demo
