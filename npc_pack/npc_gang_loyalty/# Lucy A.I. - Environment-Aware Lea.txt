@@ -1,0 +1,154 @@
+# Lucy A.I. - Environment-Aware Learning Structure with Persistent Memory Crates, Voice Interaction, and Speech Output
+
+# File: lucy_core.py
+# Purpose: Automate learning, behavior adaptation, persistent memory, memory crate system, voice interaction, voice feedback,
+#          mouse movement, web search, and account/API integration with deeper system control
+
+import os
+import json
+import time
+import threading
+import speech_recognition as sr
+import pyttsx3
+import pyautogui
+import webbrowser
+import requests
+import subprocess
+from datetime import datetime
+import tkinter as tk
+from tkinter import messagebox
+
+# Core personality traits
+LUCY_TRAITS = ["flirty", "confident", "loyal", "clever"]
+
+# Configurable memory and behavior
+CONFIG = {
+    "learning_enabled": True,
+    "track_commands": True,
+    "auto_save_knowledge": True,
+    "watch_paths": [
+        "C:/Users/Randy/Documents/",
+        "C:/FXServer/",
+        "C:/Program Files/txAdmin/"
+    ],
+    "memory_file": "lucy_memory.json",
+    "memory_crate_dir": "lucy_crates/",
+    "save_interval": 60,
+    "log_file": "lucy_log.txt",
+    "max_threads": 1,
+    "analysis_depth": 3,
+    "chat_memory_limit": 50,
+    "voice_feedback": True,
+    "text_feedback": True,
+    "popup_feedback": False,
+    "organization_by_context": True,
+    "daily_reminder_time": "09:00",
+    "ui_enabled": True,
+    "allow_shell_commands": True,
+    "trusted_programs": ["notepad", "chrome", "explorer", "fortnite", "fivem", "gta5"],
+    "auto_clone_github": True
+}
+
+lucy_memory = {
+    "known_files": {},
+    "app_usage": {},
+    "user_preferences": {},
+    "command_history": [],
+    "adaptive_patterns": {},
+    "visited_urls": [],
+    "contextual_folders": {},
+    "daily_notes": []
+}
+
+learning_thread = None
+voice_thread = None
+reminder_thread = None
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+preferred_voice_index = 1
+engine.setProperty('voice', voices[preferred_voice_index].id)
+engine.setProperty('rate', 180)
+engine.setProperty('volume', 1.0)
+
+def respond(text):
+    if CONFIG.get("text_feedback"):
+        print(f"Lucy: {text}")
+    if CONFIG.get("voice_feedback"):
+        engine.say(text)
+        engine.runAndWait()
+    if CONFIG.get("popup_feedback") and CONFIG.get("ui_enabled"):
+        messagebox.showinfo("Lucy", text)
+
+def ensure_directories():
+    os.makedirs(CONFIG['memory_crate_dir'], exist_ok=True)
+
+def load_memory():
+    if os.path.exists(CONFIG['memory_file']):
+        with open(CONFIG['memory_file'], 'r') as f:
+            global lucy_memory
+            lucy_memory = json.load(f)
+
+def save_memory():
+    with open(CONFIG['memory_file'], 'w') as f:
+        json.dump(lucy_memory, f, indent=4)
+
+def save_crate(crate_name, data):
+    crate_path = os.path.join(CONFIG['memory_crate_dir'], f"{crate_name}.json")
+    os.makedirs(os.path.dirname(crate_path), exist_ok=True)
+    with open(crate_path, 'w') as f:
+        json.dump(data, f, indent=4)
+    log(f"Saved memory crate: {crate_name}")
+
+def organize_by_context(path):
+    if CONFIG.get("organization_by_context"):
+        context = "fxserver" if "FXServer" in path else "txadmin" if "txAdmin" in path else "documents"
+        if context not in lucy_memory["contextual_folders"]:
+            lucy_memory["contextual_folders"][context] = []
+        if path not in lucy_memory["contextual_folders"][context]:
+            lucy_memory["contextual_folders"][context].append(path)
+            log(f"Organized {path} under context: {context}")
+
+def log(message):
+    with open(CONFIG['log_file'], 'a') as f:
+        f.write(f"[{datetime.now()}] {message}\n")
+
+def run_shell(cmd):
+    if CONFIG.get("allow_shell_commands"):
+        try:
+            output = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT, text=True)
+            log(f"Shell command output: {output}")
+            respond(f"Executed: {cmd}")
+            return output
+        except subprocess.CalledProcessError as e:
+            log(f"Shell error: {e.output}")
+            respond("Shell command failed")
+
+def open_program_by_name(name):
+    programs = CONFIG.get("trusted_programs", [])
+    if name.lower() in programs:
+        run_exe(f"{name}.exe")
+    else:
+        respond("Program not trusted or unknown")
+
+def close_program_by_name(name):
+    programs = CONFIG.get("trusted_programs", [])
+    if name.lower() in programs:
+        try:
+            subprocess.call(["taskkill", "/f", "/im", f"{name}.exe"], shell=True)
+            respond(f"Closed {name} successfully")
+            log(f"Closed program: {name}")
+        except Exception as e:
+            log(f"Failed to close {name}: {str(e)}")
+            respond("Failed to close the program")
+    else:
+        respond("Program not trusted or unknown")
+
+def simulate_keypress(keys):
+    respond(f"Simulating: {keys}")
+    pyautogui.hotkey(*keys.split('+'))
+
+def clone_github_repo(url, destination="lucy_clones"):
+    if CONFIG.get("auto_clone_github"):
+        os.makedirs(destination, exist_ok=True)
+        cmd = f"git clone {url} {destination}"
+        run_shell(cmd)
