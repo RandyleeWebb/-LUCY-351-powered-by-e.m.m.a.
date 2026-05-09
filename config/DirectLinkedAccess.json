@@ -1,0 +1,125 @@
+{
+  "version": "2.0.0",
+  "description": "DirectLinkedAccess (DLA) Registry — Sovereign Ecosystem Awareness for Lucy 351",
+  "lastUpdated": "2025-01-XX",
+  "sovereignMode": {
+    "enabled": true,
+    "allowDeepScan": true,
+    "allowDeepWrite": false,
+    "description": "Lucy can scan ecosystem but cannot write outside sandbox without approval"
+  },
+  "paths": {
+    "SYSTEM_ROOT": "C:\\",
+    "UE5_ROOT": "C:\\Program Files\\Epic Games\\UE_5.4",
+    "UE5_PROJECTS": "C:\\Users\\Randy Webb\\Documents\\Unreal Projects",
+    "UE5_CURRENT_PROJECT": "C:\\Users\\Randy Webb\\Documents\\Unreal Projects\\Lucys8kSTLbuild\\Lucys8kSTLbuild.uproject",
+    "UNITY_ROOT": "C:\\Program Files\\Unity\\Hub\\Editor\\2023.1.0f1",
+    "UNITY_PROJECTS": "C:\\Users\\Randy Webb\\Documents\\Unity Projects",
+    "VAULT_ROOT": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3\\AlphaDeltaVault",
+    "LUCY_WORKSPACE": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3",
+    "LUCY_SANDBOX": "C:\\LucySandbox",
+    "LUCY_BUILD": "C:\\LucySandbox\\build",
+    "LUCY_TEMP": "C:\\LucySandbox\\temp",
+    "LUCY_LOGS": "C:\\LucySandbox\\logs",
+    "LUCY_ARTIFACTS": "C:\\LucySandbox\\artifacts",
+    "LUCY_CACHE": "C:\\LucySandbox\\cache",
+    "FIVEM_RESOURCES": "C:\\Users\\Randy Webb\\Documents\\FiveM\\resources",
+    "VISUAL_STUDIO": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise",
+    "NODE_MODULES": "C:\\Users\\Randy Webb\\3D Objects\\LucyClean_AGI_OS_v3\\node_modules",
+    "NVIDIA_DRIVERS": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\NVIDIA Corporation",
+    "NVIDIA_SETTINGS": "C:\\ProgramData\\NVIDIA Corporation",
+    "OLLAMA_ROOT": "C:\\Users\\Randy Webb\\AppData\\Local\\Programs\\Ollama"
+  },
+  "ecosystemScanTargets": {
+    "description": "Paths Lucy can scan for optimization opportunities",
+    "targets": [
+      {
+        "path": "C:\\ProgramData\\NVIDIA Corporation",
+        "purpose": "GPU driver settings optimization",
+        "scanType": "config_analysis",
+        "proposalRiskWeight": 0.9
+      },
+      {
+        "path": "C:\\Users\\Randy Webb\\Documents\\Unreal Projects\\Lucys8kSTLbuild",
+        "purpose": "UE5 project health monitoring",
+        "scanType": "project_awareness",
+        "proposalRiskWeight": 0.7
+      },
+      {
+        "path": "C:\\Windows\\Temp",
+        "purpose": "System clutter detection",
+        "scanType": "bubble_bath_candidate",
+        "proposalRiskWeight": 0.8
+      },
+      {
+        "path": "C:\\Users\\Randy Webb\\AppData\\Local\\Temp",
+        "purpose": "User temp files cleanup",
+        "scanType": "bubble_bath_candidate",
+        "proposalRiskWeight": 0.8
+      }
+    ]
+  },
+  "blockedPaths": [
+    "C:\\Windows",
+    "C:\\Windows\\System32",
+    "C:\\Windows\\SysWOW64",
+    "C:\\Program Files (x86)",
+    "C:\\Program Files\\Windows*",
+    "C:\\Users\\*\\AppData\\Roaming\\Microsoft\\Windows",
+    "C:\\ProgramData\\Microsoft\\Windows",
+    "C:\\$Recycle.Bin"
+  ],
+  "allowedCommands": [
+    "node",
+    "npm",
+    "npx",
+    "tsc",
+    "ts-node",
+    "vite",
+    "powershell",
+    "cmd",
+    "python",
+    "git",
+    "dotnet",
+    "msbuild",
+    "cl",
+    "clang",
+    "gcc",
+    "UnrealEditor",
+    "Unity"
+  ],
+  "blockedCommands": [
+    "rm",
+    "rmdir",
+    "del",
+    "format",
+    "diskpart",
+    "shutdown",
+    "restart",
+    "taskkill",
+    "reg delete",
+    "bcdedit",
+    "sfc",
+    "chkdsk"
+  ],
+  "dangerousPatterns": [
+    "/f /s /q",
+    "-rf /",
+    "-Force -Recurse",
+    "System32",
+    "SysWOW64",
+    "boot\\BCD",
+    "registry\\machine\\system"
+  ],
+  "metadata": {
+    "registeredBy": "Human Root Authority",
+    "registeredAt": "2025-01-XX",
+    "lastValidated": "2025-01-XX",
+    "notes": [
+      "This registry defines safe paths for Lucy's TacticalExecutor",
+      "All paths are validated before command execution",
+      "Blocked paths cannot be accessed even with approval",
+      "Blocked commands are rejected at the ActionEngine level"
+    ]
+  }
+}

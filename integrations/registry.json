@@ -1,0 +1,455 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01",
+  "integrations": [
+    {
+      "id": "unity",
+      "name": "Unity",
+      "type": "game-engine",
+      "category": "Game Engines",
+      "url": "https://unity.com",
+      "description": "Versatile 2D/3D game engine with C# scripting",
+      "executable": {
+        "windows": "C:\\Program Files\\Unity\\Hub\\Editor\\*\\Editor\\Unity.exe",
+        "default": "unity"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "@unity/mcp-server",
+        "configExample": {
+          "command": "node",
+          "args": ["node_modules/@unity/mcp-server/dist/index.js", "--project", "${PROJECT_PATH}"]
+        }
+      },
+      "api": {
+        "available": false
+      },
+      "features": ["AI Assistant", "Coplay", "ML-Agents", "Asset Generation"],
+      "priority": "high"
+    },
+    {
+      "id": "unreal",
+      "name": "Unreal Engine",
+      "type": "game-engine",
+      "category": "Game Engines",
+      "url": "https://unrealengine.com",
+      "description": "AAA game engine with high-fidelity visuals and Blueprints",
+      "executable": {
+        "windows": "C:\\Program Files\\Epic Games\\UE_*\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+        "default": "unrealed"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "unreal-mcp-server",
+        "configExample": {
+          "command": "unreal-mcp-server",
+          "args": ["--project", "${PROJECT_PATH}"]
+        }
+      },
+      "api": {
+        "available": false
+      },
+      "features": ["NeoStack AI", "Ludus AI", "AI Assistant Plugin", "Convai"],
+      "priority": "high"
+    },
+    {
+      "id": "godot",
+      "name": "Godot Engine",
+      "type": "game-engine",
+      "category": "Game Engines",
+      "url": "https://godotengine.org",
+      "description": "Free open-source engine with excellent AI/MCP integration",
+      "executable": {
+        "windows": "C:\\Program Files\\Godot\\Godot.exe",
+        "default": "godot"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "godot-mcp-server",
+        "configExample": {
+          "command": "godot-mcp-server",
+          "args": ["--project", "${PROJECT_PATH}"]
+        }
+      },
+      "api": {
+        "available": false
+      },
+      "features": ["AI Assistant Hub", "Ziva", "Fuku", "MCP Native", "Scene Generation"],
+      "priority": "high",
+      "notes": "Best engine for full AI control via MCP"
+    },
+    {
+      "id": "gamemaker",
+      "name": "GameMaker",
+      "type": "game-engine",
+      "category": "Game Engines",
+      "url": "https://gamemaker.io",
+      "description": "Beginner-friendly 2D engine with drag-and-drop + GML",
+      "executable": {
+        "windows": "C:\\Program Files\\GameMaker\\GameMaker.exe",
+        "default": "gamemaker"
+      },
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": false
+      },
+      "features": ["GMS2-AI Assistant", "Visual Scripting"],
+      "priority": "medium"
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "type": "3d-modeling",
+      "category": "3D Modeling & Assets",
+      "url": "https://blender.org",
+      "description": "Free open-source 3D creation suite with Python API",
+      "executable": {
+        "windows": "C:\\Program Files\\Blender Foundation\\Blender *\\blender.exe",
+        "default": "blender"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "blender-mcp-server",
+        "configExample": {
+          "command": "blender-mcp-server",
+          "args": ["--blender-path", "${BLENDER_PATH}"]
+        }
+      },
+      "api": {
+        "available": true,
+        "type": "python",
+        "endpoint": "http://localhost:8080/api/v1"
+      },
+      "features": ["Python API", "Add-on System", "Mesh Generation", "Material/Texture"],
+      "priority": "high"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "type": "ai-assistant",
+      "category": "AI Assistants & Editors",
+      "url": "https://claude.ai",
+      "description": "MCP-native AI coding assistant by Anthropic",
+      "executable": {
+        "windows": "C:\\Users\\${USERNAME}\\AppData\\Local\\Programs\\Claude\\Claude.exe",
+        "default": "claude"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "lucy-mcp-server",
+        "configExample": {
+          "command": "node",
+          "args": ["backend/mcp/lucy-server.js"]
+        }
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://api.anthropic.com/v1",
+        "requiresAuth": true,
+        "authType": "api-key"
+      },
+      "features": ["MCP Native", "Code Generation", "Project Context", "Multi-file Edit"],
+      "priority": "high"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "type": "ai-assistant",
+      "category": "AI Assistants & Editors",
+      "url": "https://cursor.sh",
+      "description": "AI-first code editor built on VS Code",
+      "executable": {
+        "windows": "C:\\Users\\${USERNAME}\\AppData\\Local\\Programs\\cursor\\Cursor.exe",
+        "default": "cursor"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "lucy-mcp-server",
+        "configExample": {
+          "command": "node",
+          "args": ["backend/mcp/lucy-server.js"]
+        }
+      },
+      "api": {
+        "available": false
+      },
+      "features": ["AI Autocomplete", "Chat", "Multi-model", "Codebase Context"],
+      "priority": "high"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "type": "ai-assistant",
+      "category": "AI Assistants & Editors",
+      "url": "https://codeium.com/windsurf",
+      "description": "Agentic AI IDE with deep codebase understanding",
+      "executable": {
+        "windows": "C:\\Users\\${USERNAME}\\AppData\\Local\\Programs\\Windsurf\\Windsurf.exe",
+        "default": "windsurf"
+      },
+      "mcp": {
+        "available": true
+      },
+      "api": {
+        "available": false
+      },
+      "features": ["Cascade Agent", "Codebase-wide Edits", "Context-aware"],
+      "priority": "medium"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "type": "api",
+      "category": "APIs & Data Sources",
+      "url": "https://github.com",
+      "description": "Code hosting and collaboration platform",
+      "executable": {
+        "windows": "C:\\Program Files\\Git\\bin\\git.exe",
+        "default": "git"
+      },
+      "mcp": {
+        "available": true,
+        "serverCommand": "@modelcontextprotocol/server-github",
+        "configExample": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-github"],
+          "env": {
+            "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+          }
+        }
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://api.github.com",
+        "requiresAuth": true,
+        "authType": "token",
+        "docs": "https://docs.github.com/rest"
+      },
+      "features": ["Repo Management", "Issues", "PRs", "Actions", "Search"],
+      "priority": "high"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "type": "api",
+      "category": "APIs & Data Sources",
+      "url": "https://openai.com",
+      "description": "GPT models and AI services",
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://api.openai.com/v1",
+        "requiresAuth": true,
+        "authType": "api-key",
+        "docs": "https://platform.openai.com/docs"
+      },
+      "features": ["GPT-4", "GPT-3.5", "Embeddings", "Vision", "Audio"],
+      "priority": "high"
+    },
+    {
+      "id": "usgs-earthquake",
+      "name": "USGS Earthquake",
+      "type": "api",
+      "category": "APIs & Data Sources",
+      "url": "https://earthquake.usgs.gov",
+      "description": "Real-time earthquake data",
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+        "requiresAuth": false,
+        "docs": "https://earthquake.usgs.gov/fdsnws/event/1/"
+      },
+      "features": ["Real-time Events", "Historical Data", "GeoJSON"],
+      "priority": "medium"
+    },
+    {
+      "id": "nasa",
+      "name": "NASA APIs",
+      "type": "api",
+      "category": "APIs & Data Sources",
+      "url": "https://api.nasa.gov",
+      "description": "Space data and imagery",
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://api.nasa.gov",
+        "requiresAuth": true,
+        "authType": "api-key",
+        "docs": "https://api.nasa.gov"
+      },
+      "features": ["APOD", "Mars Rover", "Earth", "Asteroids", "EPIC"],
+      "priority": "medium"
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "type": "communication",
+      "category": "Communication Tools",
+      "url": "https://discord.com",
+      "description": "Voice, video, and text communication",
+      "executable": {
+        "windows": "C:\\Users\\${USERNAME}\\AppData\\Local\\Discord\\app-*\\Discord.exe",
+        "default": "discord"
+      },
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://discord.com/api/v10",
+        "requiresAuth": true,
+        "authType": "bot-token",
+        "docs": "https://discord.com/developers/docs"
+      },
+      "features": ["Bot API", "Webhooks", "Voice", "Embeds"],
+      "priority": "medium"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "type": "cloud",
+      "category": "Cloud & Database Services",
+      "url": "https://supabase.com",
+      "description": "Open-source Firebase alternative with PostgreSQL",
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "rest",
+        "endpoint": "https://${PROJECT_ID}.supabase.co/rest/v1",
+        "requiresAuth": true,
+        "authType": "api-key",
+        "docs": "https://supabase.com/docs"
+      },
+      "features": ["PostgreSQL", "Auth", "Storage", "Realtime", "Edge Functions"],
+      "priority": "high"
+    },
+    {
+      "id": "filesystem",
+      "name": "Filesystem",
+      "type": "system-utility",
+      "category": "System Utilities",
+      "url": "local",
+      "description": "Local filesystem operations via MCP",
+      "mcp": {
+        "available": true,
+        "serverCommand": "@modelcontextprotocol/server-filesystem",
+        "configExample": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-filesystem", "${WORKSPACE_ROOT}"]
+        }
+      },
+      "api": {
+        "available": true,
+        "type": "node",
+        "endpoint": "fs"
+      },
+      "features": ["Read", "Write", "List", "Watch", "Search"],
+      "priority": "high"
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell",
+      "type": "system-utility",
+      "category": "System Utilities",
+      "url": "local",
+      "description": "Windows command shell and scripting",
+      "executable": {
+        "windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "default": "powershell"
+      },
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "command",
+        "endpoint": "powershell.exe"
+      },
+      "features": ["Script Execution", "System Control", "Automation"],
+      "priority": "high"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "type": "system-utility",
+      "category": "System Utilities",
+      "url": "https://git-scm.com",
+      "description": "Version control system",
+      "executable": {
+        "windows": "C:\\Program Files\\Git\\bin\\git.exe",
+        "default": "git"
+      },
+      "mcp": {
+        "available": false
+      },
+      "api": {
+        "available": true,
+        "type": "command",
+        "endpoint": "git"
+      },
+      "features": ["Version Control", "Branching", "Collaboration"],
+      "priority": "high"
+    }
+  ],
+  "mcpServers": [
+    {
+      "id": "filesystem",
+      "name": "@modelcontextprotocol/server-filesystem",
+      "description": "Secure file operations",
+      "installCommand": "npm install -g @modelcontextprotocol/server-filesystem"
+    },
+    {
+      "id": "github",
+      "name": "@modelcontextprotocol/server-github",
+      "description": "GitHub repository operations",
+      "installCommand": "npm install -g @modelcontextprotocol/server-github"
+    },
+    {
+      "id": "godot",
+      "name": "godot-mcp-server",
+      "description": "Godot engine control (scenes, scripts, nodes)",
+      "installCommand": "npm install -g godot-mcp-server"
+    },
+    {
+      "id": "unity",
+      "name": "@unity/mcp-server",
+      "description": "Unity project automation",
+      "installCommand": "npm install -g @unity/mcp-server"
+    },
+    {
+      "id": "puppeteer",
+      "name": "@modelcontextprotocol/server-puppeteer",
+      "description": "Browser automation",
+      "installCommand": "npm install -g @modelcontextprotocol/server-puppeteer"
+    },
+    {
+      "id": "brave-search",
+      "name": "@modelcontextprotocol/server-brave-search",
+      "description": "Web search",
+      "installCommand": "npm install -g @modelcontextprotocol/server-brave-search"
+    },
+    {
+      "id": "memory",
+      "name": "@modelcontextprotocol/server-memory",
+      "description": "Persistent knowledge graph",
+      "installCommand": "npm install -g @modelcontextprotocol/server-memory"
+    }
+  ]
+}
