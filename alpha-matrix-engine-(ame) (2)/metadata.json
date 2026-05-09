@@ -1,0 +1,5 @@
+{
+  "name": "Alpha Matrix Engine (AME)",
+  "description": "Next-generation 8K game engine editor and runtime prototype with data-oriented design and AI-assisted world building.",
+  "requestFramePermissions": []
+}
